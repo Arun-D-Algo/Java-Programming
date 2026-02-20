@@ -10,11 +10,17 @@ public class ShoppingCart{
         double[] prices = new double[count];
         int[] quantities = new int[count];
 
+
         for (int i = 0; i<count; i++){
-            System.out.println("\nEnter name of the item :");
+
+
+            System.out.println("\nEnter name of item" + i + " :");
             names[i] = scanner.nextLine();
+
+
             System.out.println("\nEnter price of the item :");
             prices[i] = scanner.nextDouble();
+
             while (prices[i] < 0) {
                 System.out.println("INVALID PRICE! Enter a valid positive price:");
                 prices[i] = scanner.nextDouble();
@@ -22,25 +28,33 @@ public class ShoppingCart{
 
             System.out.println("\nEnter quantity of the item :");
             quantities[i] = scanner.nextInt();
+
             while (quantities[i] < 0) {
                 System.out.println("INVALID QUANTITY! Enter a valid positive quantity:");
                 quantities[i] = scanner.nextInt();
             }
 
-scanner.nextLine();         
+            scanner.nextLine();         
         }  
+
+
         double grandTotal = calculateGrandTotal(prices, quantities, count);
         DisplayCart(names, prices, quantities, count);
-        System.out.println("\nThe GRAND TOTAL of the cart is :" + grandTotal);
+
+
+        System.out.println("\nThe GRAND TOTAL of the cart is : " + grandTotal);
         if(grandTotal>1000){
             System.out.println("Your Order is Eligible for FREE DELIVERY !");
         }
+
+
         scanner.close();
     }
 
     public static double calculateItemTotal(double price, int quantity){
         return price*quantity;
     }
+
 
     public static double calculateGrandTotal(double[] prices, int[] quantities, int count){
         double total = 0;
@@ -50,7 +64,9 @@ scanner.nextLine();
         return total;
     }
 
+
     public static void DisplayCart(String[] names, double[] prices, int[] quantities, int count){
+        
         System.out.println("\n----- YOUR CART -----");
         System.out.println("Item\tPrice\tQty\tTotal");
 
