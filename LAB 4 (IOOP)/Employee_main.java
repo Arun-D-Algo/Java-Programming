@@ -12,7 +12,15 @@ class EMPLOYEE{
     EMPLOYEE(){
         Ename = "Unknown";
         Eid = 0;
-        Basic; 0;
+        Basic = 0;
+        compute_net_sal();
+    }
+
+    EMPLOYEE(String Ename, int ID, int basic){
+        this.Ename = Ename;
+        Eid = ID;
+        Basic = basic;
+        compute_net_sal();
     }
 
 
