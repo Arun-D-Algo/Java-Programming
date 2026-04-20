@@ -71,15 +71,15 @@ public class CompoundInterest {
         System.out.println();
         System.out.println("Investment ID : " + investmentID);
         System.out.println();
-        System.out.printf("Principal Amount:     %.2f\n", principal);
-        System.out.printf("Annual Interest Rate:     %.2f%%\n", rate);
-        System.out.printf("Compounding Frequency:     %d\n", time);
-        System.out.printf("Investment Duration:     %d years\n", years);
+        System.out.printf("%-25s %10.2f\n", "Principal Amount:", principal);
+        System.out.printf("%-25s %9.2f%%\n", "Annual Interest Rate:", rate);
+        System.out.printf("%-25s %10d\n", "Compounding Frequency:", time);
+        System.out.printf("%-25s %10d years\n", "Investment Duration:", years);
 
         System.out.println("\n-----------------------------------------\n");
 
-        System.out.printf("Final Amount:     %.2f\n", amount);
-        System.out.printf("Total Interest Earned:     %.2f\n", interest);
+        System.out.printf("%-25s %10.2f\n", "Final Amount:", amount);
+        System.out.printf("%-25s %10.2f\n", "Total Interest Earned:", interest);
 
         System.out.println("\n-----------------------------------------");
     }
