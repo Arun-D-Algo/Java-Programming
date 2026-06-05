@@ -23,6 +23,14 @@ class EMPLOYEE{
         compute_net_sal();
     }
 
+    void read(Scanner scanner){
+        System.out.println("Enter Employee Name : ");
+        Ename = scanner.next();
+        System.out.println("Enter Employee ID : ");
+        Eid = scanner.nextInt();
+        System.out.println("Enter basic salary : ");
+        Basic = scanner.nextInt();
+    }
 
     void compute_net_sal(){
         DA = 0.52f*Basic;
@@ -38,6 +46,7 @@ class EMPLOYEE{
         System.out.println("Gross Salary : " + Gross_Sal);
         System.out.println("Net Salary : " + Net_Sal);
     }
+
 }
 
 public class Employee_main {
@@ -53,10 +62,20 @@ public class Employee_main {
             employee[i].read(scanner);
             employee[i].compute_net_sal();
         }
+
         System.out.println("Employee Details : ");
         for(int i=0; i<N; i++){
             employee[i].display();
             System.out.println();
         }
+
+        System.out.println("Displaying Constructor Behavior : ");
+        System.out.println("Default Constructor :");
+        EMPLOYEE emp1 = new EMPLOYEE();
+        emp1.display();
+        System.out.println();
+        System.out.println("Parameterized Constructor :");
+        EMPLOYEE emp2 = new EMPLOYEE("Aasha", 3, 23000);
+        emp2.display();
     }
 }

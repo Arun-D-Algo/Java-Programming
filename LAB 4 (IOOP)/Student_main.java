@@ -2,8 +2,6 @@
 parameterized constructor to this class. Also provide a display method. Illustrate all
 the constructors as well as the display method by defining STUDENT objects.*/
 
-import java.util.Scanner;
-
 class STUDENT{
     String sname;
     int[] marks_array = new int[3];
